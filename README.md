@@ -73,20 +73,6 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
----
-
-## ⚙️ Retrain the Model (Optional)
-
-If you want to retrain the model:
-
-```bash
-python train_model.py
-```
-
-This will regenerate `model.pkl` and `vectorizer.pkl`.
-
----
-
 ## 📊 Evaluation Results
 
 Confusion Matrix from test data (20%):

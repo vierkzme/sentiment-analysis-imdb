@@ -17,7 +17,6 @@ Sebuah proyek **Machine Learning** sederhana menggunakan Python untuk menganalis
 ## 🗂️ Struktur Folder
 
 sentiment-app/
-│
 ├── app.py # Aplikasi Streamlit
 ├── model.pkl # Model klasifikasi yang sudah dilatih
 ├── vectorizer.pkl # TF-IDF Vectorizer yang sudah dilatih

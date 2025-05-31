@@ -100,12 +100,6 @@ Confusion Matrix from test data (20%):
 
 ---
 
-## 🌐 App Demo Screenshot
-
-![demo-app](https://user-images.githubusercontent.com/your-image-url/demo.gif)
-
----
-
 ## 📦 Requirements
 
 ```

@@ -1,80 +1,114 @@
-# 🎬 Sentiment Analysis Ulasan Film IMDB 🎭
+# 🎬 IMDB Movie Review Sentiment Analysis 🎭
 
-Sebuah proyek **Machine Learning** sederhana menggunakan Python untuk menganalisis sentimen dari ulasan film IMDB. Proyek ini mencakup proses preprocessing teks, pelatihan model, evaluasi performa, serta sebuah aplikasi web interaktif menggunakan **Streamlit**.
-
----
-
-## 📌 Fitur Proyek
-
-✅ Preprocessing teks ulasan (cleaning, stopword removal, stemming)  
-✅ Transformasi data teks menggunakan **TF-IDF Vectorizer**  
-✅ Pelatihan model klasifikasi menggunakan **Logistic Regression**  
-✅ Evaluasi performa model menggunakan **confusion matrix**  
-✅ Aplikasi demo berbasis web untuk prediksi sentimen ulasan secara real-time
+A simple **Machine Learning** project using Python to analyze sentiment in IMDB movie reviews. This project covers text preprocessing, model training, performance evaluation, and an interactive web app using **Streamlit**.
 
 ---
 
-## 🗂️ Struktur Folder
+## 📌 Project Features
 
+✅ Text preprocessing (cleaning, stopword removal, stemming)  
+✅ Text transformation using **TF-IDF Vectorizer**  
+✅ Sentiment classification using **Logistic Regression**  
+✅ Model evaluation with **confusion matrix**  
+✅ Web demo app for real-time sentiment prediction
+
+---
+
+## 🗂️ Project Structure
+
+```
 sentiment-app/
-├── app.py # Aplikasi Streamlit
-├── model.pkl # Model klasifikasi yang sudah dilatih
-├── vectorizer.pkl # TF-IDF Vectorizer yang sudah dilatih
-├── test_load.py # Script pengecekan kompatibilitas versi model/vectorizer
-├── requirements.txt # Daftar dependensi proyek
-└── README.md # Dokumentasi proyek ini
-
+│
+├── app.py                  # Streamlit application
+├── model.pkl               # Trained classification model
+├── vectorizer.pkl          # Trained TF-IDF vectorizer
+├── IMDB Dataset.csv        # Movie review dataset (100k samples)
+├── train_model.py          # Script to train model and save .pkl files
+├── test_load.py            # Script to verify model/vectorizer compatibility
+├── requirements.txt        # Project dependencies
+└── README.md               # This documentation
+```
 
 ---
 
-## 🧠 Algoritma yang Digunakan
+## 🧠 Algorithms Used
 
 - **Text Preprocessing**: BeautifulSoup, RegEx, Stopword Removal, Stemming
-- **TF-IDF Vectorization**: Untuk mengubah teks menjadi fitur numerik
-- **Logistic Regression**: Sebagai algoritma klasifikasi utama
-- **Scikit-learn**: Untuk training, evaluasi, dan serialization model
+- **TF-IDF Vectorization**: Converts text into numerical features
+- **Logistic Regression**: Main classification algorithm
+- **Scikit-learn**: For training, evaluation, and model serialization
 
 ---
 
-## 🧪 Contoh Ulasan
+## 🧪 Review Examples
 
+```text
 "The movie was an absolute masterpiece. The performances were stunning."
-→ Model memprediksi: POSITIF 😊
+→ Model prediction: POSITIVE 😊
 
 "This was the worst movie I’ve ever seen. I walked out of the theater."
-→ Model memprediksi: NEGATIF 😞
+→ Model prediction: NEGATIVE 😞
+```
 
 ---
 
-🚀 Jalankan Proyek Ini Secara Lokal
-1. Clone repository
+## 🚀 Run the Project Locally
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/vierkzme/sentiment-analysis-imdb
 cd sentiment-analysis-imdb
+```
 
-2. Install dependency (disarankan gunakan virtual environment)
+### 2. Install dependencies (use virtual environment recommended)
+
+```bash
 pip install -r requirements.txt
+```
 
-3. Jalankan aplikasi
+### 3. Launch the application
+
+```bash
 streamlit run app.py
+```
 
 ---
 
-📊 Hasil Evaluasi
-Confusion Matrix dari hasil uji pada data test (20%):
+## 📊 Evaluation Results
 
-Predicted Positif	Predicted Negatif
-Actual Positif	TP = xx	FN = xx
-Actual Negatif	FP = xx	TN = xx
+Confusion Matrix from test data (20%):
 
-(⚠️ Angka di atas bisa diisi sesuai hasil evaluasi kamu.)
+|                     | Predicted Positive | Predicted Negative |
+| ------------------- | ------------------ | ------------------ |
+| **Actual Positive** | TP = xx            | FN = xx            |
+| **Actual Negative** | FP = xx            | TN = xx            |
+
+(⚠️ Replace values above with your actual results.)
 
 ---
 
-⚠️ Catatan Penting
-Pastikan versi scikit-learn saat melatih dan memuat model harus sama (disarankan 1.6.1) agar file .pkl bisa digunakan tanpa error.
-Gunakan test_load.py untuk memastikan file model dan vectorizer bisa digunakan sebelum dipakai di app.py.
+## 📦 Requirements
 
-📎 Lisensi
-Proyek ini dirilis dengan MIT License — silakan digunakan, dimodifikasi, dan dibagikan dengan bebas.
+```
+pandas
+numpy
+scikit-learn==1.6.1
+nltk
+beautifulsoup4
+streamlit
+```
 
-Dibuat dengan ❤️ oleh Ardy Nugroho sebagai bagian dari portfolio data science pribadi.
+---
+
+## ⚠️ Important Notes
+
+- Make sure the version of `scikit-learn` used to **train** and **load** the model is the **same** (recommended: `1.6.1`) to avoid `.pkl` file errors.
+- Use `test_load.py` to verify the model and vectorizer before using in `app.py`.
+
+---
+
+## 📄 License
+
+MIT License © 2025 – vierkzme
+Please feel free to use, modify and share freely.

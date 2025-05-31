@@ -75,8 +75,7 @@ Actual Negatif	FP = xx	TN = xx
 Pastikan versi scikit-learn saat melatih dan memuat model harus sama (disarankan 1.6.1) agar file .pkl bisa digunakan tanpa error.
 Gunakan test_load.py untuk memastikan file model dan vectorizer bisa digunakan sebelum dipakai di app.py.
 
-🧑‍💻 Penulis
-Dibuat dengan ❤️😘😹 oleh Ardy Nugroho sebagai bagian dari portfolio data science pribadi.
+📎 Lisensi
+Proyek ini dirilis dengan MIT License — silakan digunakan, dimodifikasi, dan dibagikan dengan bebas.
 
-📃 Lisensi
-Proyek ini menggunakan lisensi MIT — silakan digunakan, dimodifikasi, dan dibagikan dengan bebas.
+Dibuat dengan ❤️ oleh Ardy Nugroho sebagai bagian dari portfolio data science pribadi.

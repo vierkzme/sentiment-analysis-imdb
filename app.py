@@ -25,16 +25,16 @@ def preprocess(text):
 
 
 # Streamlit UI
-st.title("Analisis Sentimen Film IMDB")
-review = st.text_area("Masukkan ulasan film di sini:")
+st.title("IMDB Movie Sentiment Analysis")
+review = st.text_area("Enter movie reviews here:")
 
-if st.button("Prediksi Sentimen"):
+if st.button("Sentiment Prediction"):
     if review:
         clean_text = preprocess(review)
         vectorized = vectorizer.transform([clean_text])
         prediction = model.predict(vectorized)
 
-        result = "Positif 😊" if prediction[0] == 1 else "Negatif 😞"
-        st.subheader(f"Hasil Prediksi: {result}")
+        result = "Positive 😊" if prediction[0] == 1 else "Negative 😞"
+        st.subheader(f"Predicted Results: {result}")
     else:
-        st.warning("Silakan masukkan teks terlebih dahulu.")
+        st.warning("Please enter the text first.")

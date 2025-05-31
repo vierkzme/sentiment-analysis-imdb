@@ -6,10 +6,10 @@ A simple **Machine Learning** project using Python to analyze sentiment in IMDB 
 
 ## 📌 Project Features
 
-✅ Text preprocessing (cleaning, stopword removal, stemming)  
-✅ Text transformation using **TF-IDF Vectorizer**  
-✅ Sentiment classification using **Logistic Regression**  
-✅ Model evaluation with **confusion matrix**  
+✅ Text preprocessing (cleaning, stopword removal, stemming)
+✅ Text transformation using **TF-IDF Vectorizer**
+✅ Sentiment classification using **Logistic Regression**
+✅ Model evaluation with **confusion matrix**
 ✅ Web demo app for real-time sentiment prediction
 
 ---
@@ -33,10 +33,10 @@ sentiment-app/
 
 ## 🧠 Algorithms Used
 
-- **Text Preprocessing**: BeautifulSoup, RegEx, Stopword Removal, Stemming
-- **TF-IDF Vectorization**: Converts text into numerical features
-- **Logistic Regression**: Main classification algorithm
-- **Scikit-learn**: For training, evaluation, and model serialization
+* **Text Preprocessing**: BeautifulSoup, RegEx, Stopword Removal, Stemming
+* **TF-IDF Vectorization**: Converts text into numerical features
+* **Logistic Regression**: Main classification algorithm
+* **Scikit-learn**: For training, evaluation, and model serialization
 
 ---
 
@@ -57,7 +57,7 @@ sentiment-app/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/vierkzme/sentiment-analysis-imdb
+git clone https://github.com/username/sentiment-analysis-imdb.git
 cd sentiment-analysis-imdb
 ```
 
@@ -75,22 +75,58 @@ streamlit run app.py
 
 ---
 
-📊 Hasil Evaluasi
-Confusion Matrix dari hasil uji pada data test (20%):
+## ⚙️ Retrain the Model (Optional)
 
-Predicted Positif Predicted Negatif
-Actual Positif TP = xx FN = xx
-Actual Negatif FP = xx TN = xx
+If you want to retrain the model:
 
-(⚠️ Angka di atas bisa diisi sesuai hasil evaluasi kamu.)
+```bash
+python train_model.py
+```
+
+This will regenerate `model.pkl` and `vectorizer.pkl`.
 
 ---
 
-⚠️ Catatan Penting
-Pastikan versi scikit-learn saat melatih dan memuat model harus sama (disarankan 1.6.1) agar file .pkl bisa digunakan tanpa error.
-Gunakan test_load.py untuk memastikan file model dan vectorizer bisa digunakan sebelum dipakai di app.py.
+## 📊 Evaluation Results
 
-📎 Lisensi
-Proyek ini dirilis dengan MIT License — silakan digunakan, dimodifikasi, dan dibagikan dengan bebas.
+Confusion Matrix from test data (20%):
 
-Dibuat dengan ❤️ oleh Ardy Nugroho sebagai bagian dari portfolio data science pribadi.
+|                     | Predicted Positive | Predicted Negative |
+| ------------------- | ------------------ | ------------------ |
+| **Actual Positive** | TP = xx            | FN = xx            |
+| **Actual Negative** | FP = xx            | TN = xx            |
+
+(⚠️ Replace values above with your actual results.)
+
+---
+
+## 🌐 App Demo Screenshot
+
+![demo-app](https://user-images.githubusercontent.com/your-image-url/demo.gif)
+
+---
+
+## 📦 Requirements
+
+```
+pandas
+numpy
+scikit-learn==1.6.1
+nltk
+beautifulsoup4
+streamlit
+```
+
+---
+
+## ⚠️ Important Notes
+
+* Make sure the version of `scikit-learn` used to **train** and **load** the model is the **same** (recommended: `1.6.1`) to avoid `.pkl` file errors.
+* Use `test_load.py` to verify the model and vectorizer before using in `app.py`.
+
+---
+
+## 📄 License
+
+MIT License © 2025 – vierkzme
+Please feel free to use, modify and share freely.

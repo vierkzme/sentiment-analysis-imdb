@@ -75,40 +75,22 @@ streamlit run app.py
 
 ---
 
-## 📊 Evaluation Results
+📊 Hasil Evaluasi
+Confusion Matrix dari hasil uji pada data test (20%):
 
-Confusion Matrix from test data (20%):
+Predicted Positif Predicted Negatif
+Actual Positif TP = xx FN = xx
+Actual Negatif FP = xx TN = xx
 
-|                     | Predicted Positive | Predicted Negative |
-| ------------------- | ------------------ | ------------------ |
-| **Actual Positive** | TP = xx            | FN = xx            |
-| **Actual Negative** | FP = xx            | TN = xx            |
-
-(⚠️ Replace values above with your actual results.)
+(⚠️ Angka di atas bisa diisi sesuai hasil evaluasi kamu.)
 
 ---
 
-## 📦 Requirements
+⚠️ Catatan Penting
+Pastikan versi scikit-learn saat melatih dan memuat model harus sama (disarankan 1.6.1) agar file .pkl bisa digunakan tanpa error.
+Gunakan test_load.py untuk memastikan file model dan vectorizer bisa digunakan sebelum dipakai di app.py.
 
-```
-pandas
-numpy
-scikit-learn==1.6.1
-nltk
-beautifulsoup4
-streamlit
-```
+📎 Lisensi
+Proyek ini dirilis dengan MIT License — silakan digunakan, dimodifikasi, dan dibagikan dengan bebas.
 
----
-
-## ⚠️ Important Notes
-
-- Make sure the version of `scikit-learn` used to **train** and **load** the model is the **same** (recommended: `1.6.1`) to avoid `.pkl` file errors.
-- Use `test_load.py` to verify the model and vectorizer before using in `app.py`.
-
----
-
-## 📄 License
-
-MIT License © 2025 – vierkzme
-Please feel free to use, modify and share freely.
+Dibuat dengan ❤️ oleh Ardy Nugroho sebagai bagian dari portfolio data science pribadi.
